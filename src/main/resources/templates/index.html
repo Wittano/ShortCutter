@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Shortcutter links</title>
+</head>
+<body>
+<form action="/link" method="post" th:object="${newLink}">
+    <label for="link">Your link: </label>
+    <input id="link" type="text" th:field="*{originalLink}">
+    <button>Create short link</button>
+</form>
+<p th:if="${short}" th:text="${short}"></p>
+</body>
+</html>
